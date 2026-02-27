@@ -2,21 +2,21 @@
 
 ### O objetivo do sistema é organizar informações de contratos, incluindo:
 
-* Cadastro de clientes
+* Cadastro de clientes * Cadastro de usuarios (em desenvolvimento)
 
-* Local do contrato
+* Local do contrato * Inserir contratos pdf/docs (em desenvolvimento)
 
-* Valor de pagamento
+* Valor de pagamento * Desing/Status (em desenvolvimento)
 
-* Data de entrada
+* Data de entrada 
 
-*  Email de contato
+* Email de contato
 
 * Status de pagamento (em desenvolvimento)
 
 ### O sistema também tem como objetivo futuramente permitir upload e organização de arquivos como PDF e Word relacionados aos contratos.
 
-# Tecnologias utilizadas (ou serão)
+# Tecnologias utilizadas
 
 * Python
 
@@ -24,7 +24,7 @@
 
 * HTML
 
-* Css
+* Css (em desenvolvimento)
 
 * SQLite
 
