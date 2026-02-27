@@ -38,6 +38,8 @@
 
 * SQLite
 
+* Jinja2 (em desenvolvimento)
+
 * Git / GitHub
 
 * Virtual Environment (venv)
