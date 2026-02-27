@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Contrato - Cadastro</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Cadastrar Novo Contrato</h1>
+        </div>
+    </header>
+    <main>
+        <form method="POST" action="/cadastrar">
+            <div>
+                <label for="name">Nome do Cliente</label>
+                <input type="text" name="client" id="name" required>
+            </div>
+            <br> <br>
+            <div>
+                <label for="location">Local</label>
+                <input type="text" name="local" id="location" required>
+            </div>
+            <br> <br>
+            <div>
+                <label for="rent">Valor do aluguel</label>
+                <input type="number" name="value" id="rent" step="0.01" placeholder="0.00">
+            </div>
+            <br> <br>
+            <div>
+                <label for="entry">Data de entrada</label>
+                <input type="date" name="entry_date" id="entry" required>
+            </div>
+            <br> <br>
+            <div>
+                <label for="contact">Email de contato</label>
+                <input type="email" name="email_user" id="contact">
+            </div>   
+            <br> <br>
+            <div>
+                <button type="submit">Cadastrar</button>
+            </div>
+            <br> <br>
+        </form>
+    </main>
+    
+</body>
+</html>
