@@ -2,17 +2,23 @@
 
 ### O objetivo do sistema é organizar informações de contratos, incluindo:
 
-* Cadastro de clientes * Cadastro de usuarios (em desenvolvimento)
+* Cadastro de clientes 
 
-* Local do contrato * Inserir contratos pdf/docs (em desenvolvimento)
+* Local do contrato 
 
-* Valor de pagamento * Desing/Status (em desenvolvimento)
+* Valor de pagamento 
 
 * Data de entrada 
 
 * Email de contato
 
 * Status de pagamento (em desenvolvimento)
+
+* Cadastro de usuarios (em desenvolvimento)
+ 
+*  Desing/Status (em desenvolvimento)
+
+Inserir contratos pdf/docs (em desenvolvimento)
 
 ### O sistema também tem como objetivo futuramente permitir upload e organização de arquivos como PDF e Word relacionados aos contratos.
 
