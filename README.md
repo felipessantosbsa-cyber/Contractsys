@@ -20,7 +20,7 @@
 
 * Inserir contratos pdf/docs (em desenvolvimento)
 
-* Sair do localhost e ir para WEB (em desenvolvimento)
+* Sair do localhost (em desenvolvimento)
 
 * Proteção de dados (em desenvolvimento)
 
