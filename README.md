@@ -16,9 +16,13 @@
 
 * Cadastro de usuarios (em desenvolvimento)
  
-*  Desing/Status (em desenvolvimento)
+* Desing/Status (em desenvolvimento)
 
-Inserir contratos pdf/docs (em desenvolvimento)
+* Inserir contratos pdf/docs (em desenvolvimento)
+
+* Sair do localhost e ir para WEB (em desenvolvimento)
+
+* Proteção de dados (em desenvolvimento)
 
 ### O sistema também tem como objetivo futuramente permitir upload e organização de arquivos como PDF e Word relacionados aos contratos.
 
