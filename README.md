@@ -12,6 +12,8 @@
 
 * Email de contato
 
+* Navegação
+
 * Status de pagamento (em desenvolvimento)
 
 * Cadastro de usuarios (em desenvolvimento)
@@ -38,7 +40,7 @@
 
 * SQLite
 
-* Jinja2 (em desenvolvimento)
+* Jinja2 
 
 * Git / GitHub
 
