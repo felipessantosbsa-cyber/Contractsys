@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contratos - Listagem</title>
+</head>
+<body>
+    <h1> Contratos Salvos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Local</th>
+                <th>Valor</th>
+                <th>Data Entrada</th>
+                <th>Email</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            {% for contract in contracts %}
+                <tr>
+                    <td>{{ contract[0] }}</td>
+                    <td>{{ contract[1] }}</td>
+                    <td>{{ contract[2] }}</td>
+                    <td>{{ contract[3] }}</td>
+                    <td>{{ contract[4] }}</td>
+                    <td>{{ contract[5] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <nav>
+        <br> <br>
+        <a href="/">Home</a>
+        <hr> 
+        <a href="/cadastrar">Cadastrar Contrato</a>
+        <hr>
+        <a href="/listar">Listar Contratos</a>
+        <hr>
+    </nav>
+</body>
+</html>

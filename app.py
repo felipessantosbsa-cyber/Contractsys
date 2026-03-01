@@ -22,7 +22,10 @@ def cadastrar():
     
     return render_template("cadastrar.html")
 
-
+@app.route("/listar")
+def listar():
+    contracts = get_all_contracts()
+    return render_template("listar.html", contracts=contracts)
 
 if __name__ == "__main__":
     create_tables()
