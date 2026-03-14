@@ -9,7 +9,7 @@ def create_tables():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             client_name TEXT NOT NULL,
             location TEXT NOT NULL,
-            cep TEXT
+            cep TEXT,
             rent_value REAL NOT NULL,
             entry_date DATE NOT NULL,
             email TEXT
