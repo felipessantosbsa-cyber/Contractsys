@@ -1,0 +1,206 @@
+/* ===== RESET & GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== NAVEGAÇÃO LATERAL (PRETA) ===== */
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #1a1a1a;
+    padding: 30px 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #003d7a;
+    transform: translateX(5px);
+}
+
+nav hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 15px 0;
+}
+
+/* ===== CONTEÚDO PRINCIPAL (com margem pra não ficar embaixo do nav) ===== */
+body {
+    margin-left: 250px;
+}
+
+header {
+    background: linear-gradient(135deg, #003d7a 0%, #005bb5 100%);
+    color: white;
+    padding: 40px 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #1a1a1a;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header h3 {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+main {
+    padding: 40px 50px;
+    max-width: 1200px;
+}
+
+/* ===== FORMULÁRIOS ===== */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #003d7a;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #005bb5;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #003d7a 0%, #005bb5 100%);
+    color: white;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 61, 122, 0.3);
+}
+
+/* ===== TABELAS ===== */
+table {
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+thead {
+    background: linear-gradient(135deg, #003d7a 0%, #005bb5 100%);
+    color: white;
+}
+
+thead th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+tbody td {
+    padding: 15px;
+    color: #555;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* ===== TÍTULOS ===== */
+h1 {
+    color: #003d7a;
+    margin-bottom: 20px;
+}
+
+/* ===== MENSAGENS DE SUCESSO ===== */
+.mensagem-sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+    margin: 20px 50px;
+    font-weight: 500;
+}
+
+/* ===== RESPONSIVO (opcional) ===== */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    body {
+        margin-left: 0;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}

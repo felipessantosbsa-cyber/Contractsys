@@ -11,13 +11,14 @@ def cadastrar():
     if request.method == "POST":
         client = request.form.get("client")
         local = request.form.get("local")
-        value = request.form.get("value")
+        cep = request.form.get("cep")
+        rent_value = request.form.get("rent_value")
         entry_date = request.form.get("entry_date")
         email_user = request.form.get("email_user")
 
         print(f"Cliente: {client}")
 
-        insert_contract(client, local, value, entry_date, email_user)
+        insert_contract(client, local, cep, rent_value, entry_date, email_user)
         return("contrato cadastrado com sucesso!")
     
     return render_template("cadastrar.html")

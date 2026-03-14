@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Cadastrar Contrato - Cadastro</title>
 </head>
 <body>
@@ -10,42 +11,49 @@
         <div>
             <h1>Cadastrar Novo Contrato</h1>
         </div>
+        <div>
+            <h3>Sistema de Gerenciamento de Contratos</h3>
+        </div>
     </header>
     <main>
         <form method="POST" action="/cadastrar">
             <div>
                 <label for="name">Nome do Cliente</label>
-                <input type="text" name="client" id="name" required>
+                <input type="text" name="client" id="name" required placeholder="Nome Completo">
             </div>
-            <br> <br>
+            <br> 
             <div>
                 <label for="location">Local</label>
-                <input type="text" name="local" id="location" required>
+                <input type="text" name="local" id="location" required placeholder="Rua, N° ou APT, Bairro">
             </div>
-            <br> <br>
+            <div>
+                <label for="locationCep">Cep</label>
+                <input type="text" inputmode="numeric" pattern="\d{5}-\d{3}" maxlength="9" name="cep" id="locationCep" required placeholder="00000-000">
+            </div>
+            <br> 
             <div>
                 <label for="rent">Valor do aluguel</label>
-                <input type="number" name="value" id="rent" step="0.01" placeholder="0.00">
+                <input type="number" name="rent_value" id="rent" step="0.01" placeholder="0.00">
             </div>
-            <br> <br>
+            <br> 
             <div>
                 <label for="entry">Data de entrada</label>
                 <input type="date" name="entry_date" id="entry" required>
             </div>
-            <br> <br>
+            <br> 
             <div>
                 <label for="contact">Email de contato</label>
-                <input type="email" name="email_user" id="contact">
+                <input type="email" name="email_user" id="contact" placeholder="Contato">
             </div>   
-            <br> <br>
+            <br> 
             <div>
                 <button type="submit">Cadastrar</button>
             </div>
-            <br> <br>
+            <br> 
         </form>
     </main>
     <nav>
-        <br> <br>
+        <br> 
         <a href="/">Home</a>
         <hr> 
         <a href="/cadastrar">Cadastrar Contrato</a>

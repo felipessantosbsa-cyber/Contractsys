@@ -9,7 +9,8 @@ def create_tables():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             client_name TEXT NOT NULL,
             location TEXT NOT NULL,
-            value REAL NOT NULL,
+            cep TEXT
+            rent_value REAL NOT NULL,
             entry_date DATE NOT NULL,
             email TEXT
         )       
@@ -17,14 +18,14 @@ def create_tables():
     conn.commit()
     conn.close()
     
-def insert_contract(client_name, location, value, entry_date, email):
+def insert_contract(client_name, location, cep, rent_value, entry_date, email):
     conn = sqlite3.connect(DATABASE_NAME)
     cursor = conn.cursor()
 
     cursor.execute("""
-        INSERT INTO contracts (client_name, location, value, entry_date, email)
-        VALUES (?, ?, ?, ?, ?)
-        """, (client_name, location, value, entry_date, email))
+        INSERT INTO contracts (client_name, location, cep, rent_value, entry_date, email)
+        VALUES (?, ?, ?, ?, ?, ?)
+        """, (client_name, location, cep, rent_value, entry_date, email))
     conn.commit()
     conn.close()
 
