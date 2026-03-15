@@ -20,7 +20,7 @@
  
 * Desing/Status (em desenvolvimento)
 
-* Inserir contratos pdf/docs (em desenvolvimento)
+* Inserir contratos pdf/docs
 
 * Sair do localhost (em desenvolvimento)
 
@@ -36,7 +36,7 @@
 
 * HTML
 
-* Css (em desenvolvimento)
+* Css 
 
 * SQLite
 
