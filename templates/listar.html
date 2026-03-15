@@ -21,6 +21,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Cliente</th>
+                    <th>Cpf</th>
                     <th>Local</th>
                     <th>Cep</th>
                     <th>Valor</th>
@@ -39,6 +40,7 @@
                         <td>{{ contract[4] }}</td>
                         <td>{{ contract[5] }}</td>
                         <td>{{ contract[6] }}</td>
+                        <td>{{ contract[7] }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
@@ -51,6 +53,8 @@
         <a href="/cadastrar">Cadastrar Contrato</a>
         <hr>
         <a href="/listar">Listar Contratos</a>
+        <hr>
+        <a href="/status">Status dos Contratos</a>
         <hr>
     </nav>
 </body>

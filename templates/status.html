@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title> Contratos - Listagem</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Status dos Contratos</h1>
+        </div>
+        <div>
+            <h3>Sistema de Gerenciamento de Contratos</h3>
+        </div>
+    </header>
+    <main class="contratos-grid">
+        {% for contract in contracts %}
+            <div class="contrato-card">
+                <div class="cabecalho-card">
+                    <h3>{{ contract[1] }}</h3>
+                    <p class="status-texto">{{ contract[2] }}</p>
+                </div>
+                
+                <div class="arquivo-area">
+                    <p class="nome-arquivo">{{ contract[8] if contract[8] else 'Sem arquivo' }}</p>
+                    <iframe src="/download/{{ contract[0] }}#view=FitH" width="100%"></iframe>
+                    
+                    <a href="/download/{{ contract[0] }}" class="btn-download">
+                        {% if contract[8] %}
+                            Download: {{ contract[8].split('/')[-1] }}
+                        {% else %}
+                            Não há arquivo adicionado
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+        <nav>
+        <br> <br>
+        <a href="/">Home</a>
+        <hr> 
+        <a href="/cadastrar">Cadastrar Contrato</a>
+        <hr>
+        <a href="/listar">Listar Contratos</a>
+        <hr>
+        <a href="/status">Status dos Contratos</a>
+        <hr>
+    </nav>
+</body>
+</html>

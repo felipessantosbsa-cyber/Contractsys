@@ -170,37 +170,73 @@ tbody tr:last-child {
     border-bottom: none;
 }
 
-/* ===== TÍTULOS ===== */
-h1 {
+/* ===== GRID DE CONTRATOS (FEITO POR GEMINI) ===== */
+.contratos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+
+.contrato-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #003d7a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contrato-card h3 {
     color: #003d7a;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
 }
 
-/* ===== MENSAGENS DE SUCESSO ===== */
-.mensagem-sucesso {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 15px 20px;
-    border-radius: 8px;
-    border-left: 4px solid #28a745;
-    margin: 20px 50px;
-    font-weight: 500;
+.status-texto {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
 }
 
-/* ===== RESPONSIVO (opcional) ===== */
-@media (max-width: 768px) {
-    nav {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    
-    body {
-        margin-left: 0;
-    }
-    
-    nav a {
-        display: inline-block;
-        margin-right: 10px;
-    }
+
+.arquivo-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nome-arquivo {
+    font-size: 0.8em;
+    color: #888;
+    word-break: break-all;
+}
+
+.contrato-card iframe {
+    width: 100%;
+    aspect-ratio: 1 / 1.41; 
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+
+.btn-download {
+    display: block;
+    background-color: #003d7a;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.btn-download:hover {
+    background-color: #005bb5;
 }
