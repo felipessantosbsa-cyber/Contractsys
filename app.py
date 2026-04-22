@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, send_file
-from database import create_tables, insert_contract, get_all_contracts, DATABASE_NAME
+from database import create_tables, insert_contract, get_all_contracts, insert_user, get_user, DATABASE_NAME
 import sqlite3
 import os
 
@@ -70,6 +70,7 @@ def registrar():
         username = request.form.get("username")
         user_password = request.form.get("user_password")
 
+        insert_user(username, user_password)
     return render_template("registrar.html")
 
 if __name__ == "__main__":
