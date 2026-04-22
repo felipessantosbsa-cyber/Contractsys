@@ -64,6 +64,13 @@ def dowload_file(contract_id):
     else:
         return "PDF não encontrado!"
 
+@app.route("/registrar", methods=["GET", "POST"])
+def registrar():
+    if request.method == "POST":
+        username = request.form.get("username")
+        user_password = request.form.get("user_password")
+
+    return render_template("registrar.html")
 
 if __name__ == "__main__":
     create_tables()

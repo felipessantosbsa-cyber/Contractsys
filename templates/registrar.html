@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Registrar Usuario - Registro</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Registrar Novo Usuario</h1>
+        </div>
+        <div>
+            <h3>Sistema de Gerenciamento de Contratos</h3>
+        </div>
+    </header>
+    <main>
+        <form method="POST" action="/registrar">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required placeholder="Username">
+            </div>
+            <br> 
+            <div>
+                <label for="user_password">Password</label>
+                <input type="password" name="user_password" id="user_password" required placeholder="Password">
+            </div>
+            <br> 
+            <div>
+                <button type="submit">Registrar</button>
+            </div>
+            <br> 
+        </form>
+    </main>
+    <nav>
+        <br> 
+        <a href="/">Home</a>
+        <hr> 
+        <a href="/cadastrar">Cadastrar Contrato</a>
+        <hr>
+        <a href="/listar">Listar Contratos</a>
+        <hr>
+        <a href="/status">Status dos Contratos</a>
+        <hr>
+    </nav>
+    
+</body>
+</html>

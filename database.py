@@ -19,6 +19,15 @@ def create_tables():
             file_path TEXT
         )       
     """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT NOT NULL,
+            user_password TEXT NOT NULL
+        )       
+    """)
+    
     conn.commit()
     conn.close()
 
@@ -34,6 +43,17 @@ def insert_contract(client_name, cpf_client, location, cep, rent_value, entry_da
         INSERT INTO contracts (client_name, cpf_client, location, cep, rent_value, entry_date, email, file_path)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, (client_name, cpf_client, location, cep, rent_value, entry_date, email, file_path))
+    conn.commit()
+    conn.close()
+
+def insert_user(username, user_password):
+    conn = sqlite3.connect(DATABASE_NAME)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        INSERT INTO users (username, user_password)
+        VALUES (?, ?)
+        """, (username, user_password))
     conn.commit()
     conn.close()
 
