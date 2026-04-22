@@ -46,6 +46,18 @@ def insert_contract(client_name, cpf_client, location, cep, rent_value, entry_da
     conn.commit()
     conn.close()
 
+def get_all_contracts():
+    conn = sqlite3.connect(DATABASE_NAME)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT * FROM contracts
+    """)
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+
 def insert_user(username, user_password):
     conn = sqlite3.connect(DATABASE_NAME)
     cursor = conn.cursor()
@@ -57,13 +69,15 @@ def insert_user(username, user_password):
     conn.commit()
     conn.close()
 
-def get_all_contracts():
+def get_user(username):
     conn = sqlite3.connect(DATABASE_NAME)
     cursor = conn.cursor()
 
     cursor.execute("""
-        SELECT * FROM contracts
-    """)
-    results = cursor.fetchall()
+        SELECT * FROM users WHERE username = ?
+    """, (username))
+    results = cursor.fetchone()
     conn.close()
     return results
+
+
