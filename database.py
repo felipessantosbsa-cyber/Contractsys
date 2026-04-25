@@ -1,6 +1,6 @@
 import sqlite3
 import os
-
+from werkzeug.security import generate_password_hash, check_password_hash
 DATABASE_NAME = "contracts.db"
 
 def create_tables():
@@ -65,7 +65,7 @@ def insert_user(username, user_password):
     cursor.execute("""
         INSERT INTO users (username, user_password)
         VALUES (?, ?)
-        """, (username, user_password))
+        """, (username, generate_password_hash(user_password)))
     conn.commit()
     conn.close()
 
@@ -75,9 +75,21 @@ def get_user(username):
 
     cursor.execute("""
         SELECT * FROM users WHERE username = ?
-    """, (username))
+    """, (username,))
     results = cursor.fetchone()
     conn.close()
     return results
+
+def get_user_by_id(id):
+    conn = sqlite3.connect(DATABASE_NAME)
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT * FROM users WHERE id = ?
+    """, (id,))
+    results = cursor.fetchone()
+    conn.close()
+    return results
+
 
 

@@ -2,8 +2,13 @@ from flask import Flask, render_template, request, send_file
 from database import create_tables, insert_contract, get_all_contracts, insert_user, get_user, DATABASE_NAME
 import sqlite3
 import os
+from flask_login import UserMixin, LoginManager, login_user, logout_user, login_required
 
 app = Flask(__name__)
+app.secret_key = "#0D031B"
+
+login_manager = LoginManager()
+login_manager.init_app(app)
 
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'docx', 'doc'}
@@ -72,6 +77,17 @@ def registrar():
 
         insert_user(username, user_password)
     return render_template("registrar.html")
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        ...
+    return render_template("login.html")
+
+class User(UserMixin):
+    def __init__(self, id, username):
+        self.id = id
+        self.username = username
 
 if __name__ == "__main__":
     create_tables()
