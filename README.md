@@ -1,58 +1,59 @@
 # Contractsys
 
-**Sistema web de gerenciamento de contratos de aluguel**, desenvolvido com Python e Flask. Permite cadastrar clientes, registrar contratos com upload de arquivos e visualizar todos os contratos em uma interface web.
+**Web-based rental contract management system** built with Python and Flask. Allows registering clients, creating contracts with file uploads, and viewing all contracts through a web interface.
 
 ---
 
-## Funcionalidades
+## Features
 
-- Cadastro de contratos com dados do cliente (nome, CPF, e-mail)
-- Registro de endereço (local e CEP), valor do aluguel e data de entrada
-- Upload de arquivos vinculados ao contrato (PDF, DOCX, DOC)
-- Download dos arquivos cadastrados diretamente pelo sistema
-- Listagem de todos os contratos armazenados
-- Persistência de dados com banco SQLite
-- Interface web com Flask e templates Jinja2
-
----
-
-## Tecnologias
-
-| Tecnologia | Uso |
-|---|---|
-| Python 3 | Back-end e lógica da aplicação |
-| Flask | Framework web |
-| SQLite | Banco de dados local |
-| Jinja2 | Templates HTML dinâmicos |
-| HTML / CSS | Interface do usuário |
-| Git / GitHub | Controle de versão |
+- Contract registration with client details (name, CPF, email)
+- Address registration (location and ZIP code), rent value and move-in date
+- File upload linked to contracts (PDF, DOCX, DOC)
+- Direct file download from the system
+- Full contract listing
+- Data persistence with SQLite
+- Web interface with Flask and Jinja2 templates
+- User authentication (login/logout)
 
 ---
 
-## Estrutura do projeto
+## Tech Stack
+
+| Technology   | Usage                          |
+|--------------|--------------------------------|
+| Python 3     | Back-end and application logic |
+| Flask        | Web framework                  |
+| SQLite       | Local database                 |
+| Jinja2       | Dynamic HTML templates         |
+| HTML / CSS   | User interface                 |
+| Git / GitHub | Version control                |
+
+---
+
+## Project Structure
 
 ```
 Contractsys/
-├── app.py           # Rotas e lógica principal da aplicação
-├── database.py      # Criação de tabelas e operações com SQLite
-├── templates/       # Templates HTML (Jinja2)
-├── static/          # Arquivos estáticos (CSS, imagens)
-├── uploads/         # Arquivos enviados pelos usuários (gerado automaticamente)
+├── app.py           # Main routes and application logic
+├── database.py      # Table creation and SQLite operations
+├── templates/       # HTML templates (Jinja2)
+├── static/          # Static files (CSS, images)
+├── uploads/         # User-uploaded files (auto-generated)
 └── README.md
 ```
 
 ---
 
-## Como rodar localmente
+## Getting Started
 
-**Pré-requisitos:** Python 3.8+ instalado
+**Requirements:** Python 3.8+ installed
 
 ```bash
-# 1. Clone o repositório
-git clone https://github.com/felipessantosbsa-cyber/Contractsys.git
+# 1. Clone the repository
+git clone https://github.com/felipebsa/Contractsys.git
 cd Contractsys
 
-# 2. Crie e ative o ambiente virtual
+# 2. Create and activate virtual environment
 python -m venv venv
 
 # Windows
@@ -61,30 +62,30 @@ venv\Scripts\activate
 # Linux / macOS
 source venv/bin/activate
 
-# 3. Instale as dependências
+# 3. Install dependencies
 pip install flask
 
-# 4. Rode a aplicação
+# 4. Run the application
 python app.py
 ```
 
-Acesse em: **http://127.0.0.1:5000**
+Access at: **http://127.0.0.1:5000**
 
 ---
 
-## Rotas disponíveis
+## Available Routes
 
-| Rota | Método | Descrição |
-|---|---|---|
-| `/` | GET | Página inicial |
-| `/cadastrar` | GET / POST | Formulário de cadastro de contrato |
-| `/listar` | GET | Lista todos os contratos |
-| `/status` | GET | Visualização de status dos contratos |
-| `/download/<id>` | GET | Download do arquivo vinculado ao contrato |
+| Route              | Method     | Description                        |
+|--------------------|------------|------------------------------------|
+| `/`                | GET        | Home page                          |
+| `/cadastrar`       | GET / POST | Contract registration form         |
+| `/listar`          | GET        | List all contracts                 |
+| `/status`          | GET        | Contract status view               |
+| `/download/<id>`   | GET        | Download file linked to a contract |
 
 ---
 
-## Modelo de dados
+## Data Model
 
 ```sql
 CREATE TABLE contracts (
@@ -102,11 +103,8 @@ CREATE TABLE contracts (
 
 ---
 
-## Próximas melhorias
+## Upcoming Improvements
 
-- [ ] Autenticação de usuários (login/logout)
-- [ ] Status de pagamento por contrato
-- [ ] Filtros e busca na listagem
-- [ ] Proteção e validação dos dados de entrada
-
----
+- [ ] Payment status per contract
+- [ ] Filters and search in contract listing
+- [ ] Input data validation and protection
